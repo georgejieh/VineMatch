@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "VineMatch"
+name = "vinematch"
 version = "0.1.0"
 description = "Address → (lat,lon) → recent weather + soil → grape varietal suitability"
 readme = "README.md"
@@ -11,6 +11,7 @@ requires-python = ">=3.10"
 authors = [{ name = "George Jieh" }]
 license = { file = "LICENSE" }
 
+# Keep core light; add extras as needed.
 dependencies = [
   "numpy>=1.26",
   "pandas>=2.1",
@@ -28,12 +29,6 @@ dev = [
   "ruff>=0.5",
   "black>=24.4",
 ]
-notebooks = [
-  "jupyterlab>=4.0",
-  "ipykernel>=6.29",
-  "matplotlib>=3.8",
-  "pyarrow>=15"
-]
 geo = [
   "geopandas>=0.14",
   "shapely>=2.0",
@@ -44,6 +39,7 @@ ui = [
 ]
 notebooks = [
   "jupyterlab>=4.0",
+  "ipykernel>=6.29",
   "matplotlib>=3.8",
   "pyarrow>=15",
 ]
@@ -52,7 +48,7 @@ notebooks = [
 vinematch = "vinematch.cli:main"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -63,7 +59,7 @@ line-length = 100
 
 [tool.ruff]
 line-length = 100
-select = ["E", "F", "I", "B", "UP"]
+select = ["E","F","I","B","UP"]
 
 [tool.mypy]
 python_version = "3.10"
