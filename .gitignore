@@ -205,3 +205,26 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# --- VineMatch scraper artifacts ---
+.we_profile/
+.we_storage_state.json
+playwright-report/
+test-results/
+traces/
+videos/
+screenshots/
+*.trace.zip
+
+# Scraped outputs (keep directory structure; commit placeholders only)
+data/raw/scraped/**
+!data/raw/scraped/**/.gitkeep
+!data/raw/scraped/**/README.md
+
+# Logs
+logs/
+*.log
+
+# OS cruft
+.DS_Store
+Thumbs.db
